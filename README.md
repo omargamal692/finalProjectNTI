@@ -1,24 +1,92 @@
-# finalProjectNTI
-Dataset Description
+Fraud Detection Using Machine Learning
+Overview
 
-This project uses a financial transaction dataset for fraud detection. The dataset contains transaction records along with customer and transaction-related features that help identify suspicious activities.
+This project focuses on detecting fraudulent financial transactions using machine learning techniques.
 
-The target variable is:
+The goal is to build a binary classification model that predicts whether a transaction is fraudulent or legitimate based on transaction-related features.
 
-fraud → Indicates whether a transaction is fraudulent.
-0 = Legitimate Transaction
-1 = Fraudulent Transaction
+Target Variable:
 
-The dataset includes a mix of numerical and categorical features describing transaction behavior, customer information, transaction amounts, payment methods, and other risk-related attributes. The goal is to build a machine learning model that can accurately distinguish fraudulent transactions from legitimate ones. Fraud detection is a binary classification problem and typically involves dealing with class imbalance, as fraudulent transactions represent a small portion of the data.
+is_fraud
+0 → Legitimate Transaction
+1 → Fraudulent Transaction
+Dataset
 
-Project Objective
-Perform data cleaning and preprocessing.
-Explore transaction patterns through data analysis and visualization.
-Handle class imbalance.
-Train and evaluate machine learning models for fraud detection.
-Identify the most important features contributing to fraud prediction.
-Applications
-Banking and financial security.
-Online payment systems.
-Credit card fraud prevention.
-Risk assessment and anomaly detection
+Dataset Source:
+
+Kaggle Fraud Detection Dataset
+
+Dataset Characteristics:
+
+7,000 transaction records
+12 input features
+1 target feature (is_fraud)
+Contains missing values that were handled during preprocessing
+Features
+transaction_amount
+hour_of_day
+is_weekend
+num_items
+customer_age
+prev_transactions
+distance_from_home
+device_type
+network_quality
+is_first_transaction
+store_type
+velocity_score
+Data Preprocessing
+Missing values analysis
+Median imputation for numerical features
+Exploratory Data Analysis (EDA)
+Correlation analysis
+Train-Test Split (80%-20%)
+Exploratory Data Analysis
+
+The analysis included:
+
+Missing values visualization
+Fraud distribution analysis
+Transaction amount distribution
+Correlation heatmap
+Models Used
+Logistic Regression
+
+Accuracy: 89.71%
+
+Decision Tree Classifier
+
+Accuracy: 89.71%
+
+Random Forest Classifier
+
+Accuracy: 89.71%
+
+Technologies
+Python
+NumPy
+Pandas
+Matplotlib
+Seaborn
+Scikit-Learn
+Project Structure
+Fraud-Detection/
+│
+├── data/
+│   └── fraud.csv
+│
+├── notebooks/
+│   └── Fraud_Detection.ipynb
+│
+├── images/
+│   ├── missing_values.png
+│   ├── fraud_distribution.png
+│   └── correlation_heatmap.png
+│
+├── README.md
+└── requirements.txt
+Results
+
+The models achieved an accuracy of approximately 89.7% in identifying fraudulent and legitimate transactions.
+
+This project demonstrates a complete machine learning workflow including data preprocessing, exploratory data analysis, model training, and evaluation for fraud detection.
